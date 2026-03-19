@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary Meta -->
+    <title>Ali Ilyas — Full Stack Developer</title>
+    <meta name="description" content="Full Stack Developer crafting scalable, production-ready web applications for clients worldwide. Based in Punjab, Pakistan. Available for freelance and contract work." />
+    <meta name="author" content="Ali Ilyas" />
+    <meta name="theme-color" content="#F8F3EA" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0D0D0F"  media="(prefers-color-scheme: dark)"  />
+    <link rel="canonical" href="https://aliilyas.dev/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type"         content="website" />
+    <meta property="og:url"          content="https://aliilyas.dev/" />
+    <meta property="og:title"        content="Ali Ilyas — Full Stack Developer" />
+    <meta property="og:description"  content="Building scalable web applications from database to deployment. Available for freelance and contract work." />
+    <meta property="og:image"        content="https://aliilyas.dev/og-image.png" />
+    <meta property="og:image:width"  content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale"       content="en_US" />
+    <meta property="og:site_name"    content="Ali Ilyas Portfolio" />
+
+    <!-- Twitter / X Card -->
+    <meta name="twitter:card"        content="summary_large_image" />
+    <meta name="twitter:site"        content="@aliilyas_dev" />
+    <meta name="twitter:creator"     content="@aliilyas_dev" />
+    <meta name="twitter:title"       content="Ali Ilyas — Full Stack Developer" />
+    <meta name="twitter:description" content="Building scalable web applications from database to deployment." />
+    <meta name="twitter:image"       content="https://aliilyas.dev/og-image.png" />
+
+    <!-- Favicon + PWA -->
+    <link rel="icon"             type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon"                      href="/apple-touch-icon.png" />
+    <link rel="manifest"                              href="/site.webmanifest" />
+
+    <!-- JSON-LD Person structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Ali Ilyas",
+      "url": "https://aliilyas.dev",
+      "image": "https://aliilyas.dev/og-image.png",
+      "jobTitle": "Full Stack Developer",
+      "description": "Full Stack Developer crafting scalable, production-ready web applications for clients worldwide.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Punjab",
+        "addressRegion": "Punjab",
+        "addressCountry": "PK"
+      },
+      "sameAs": [
+        "https://github.com/ilyas5223",
+        "https://linkedin.com/in/aliilyas",
+        "https://twitter.com/aliilyas_dev"
+      ],
+      "knowsAbout": ["React","Next.js","TypeScript","Node.js","PostgreSQL","AWS","Docker","GraphQL","Python"],
+      "offers": {
+        "@type": "Offer",
+        "description": "Freelance and contract Full Stack Development",
+        "availability": "https://schema.org/InStock"
+      }
+    }
+    </script>
+
+    <!--
+      font-display=swap: text renders in a system fallback immediately.
+      Custom fonts swap in once downloaded — no invisible text during load.
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Fraunces:ital,opsz,wght@0,9..144,100;0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300;1,9..144,400&family=Outfit:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Prevent FOUC -->
+    <style>
+      html      { background: #F8F3EA; }
+      html.dark { background: #0D0D0F; }
+    </style>
+  </head>
+
+  <body>
+    <!--
+      Skip navigation link — WCAG 2.4.1 "Bypass Blocks" (Level A).
+      Hidden off-screen until keyboard-focused, then slides into view.
+      Critical for keyboard-only and screen-reader users.
+    -->
+    <a
+      href="#main-content"
+      style="
+        position:absolute;top:-120px;left:1rem;z-index:99999;
+        background:#0D0D0F;color:#F8F3EA;
+        padding:0.75rem 1.5rem;
+        font-family:'Outfit',sans-serif;font-size:0.875rem;
+        text-decoration:none;transition:top 0.2s ease;
+        border:1px solid #C17B4A;outline:none;
+      "
+      onfocus="this.style.top='1rem'"
+      onblur="this.style.top='-120px'"
+    >Skip to main content</a>
+
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

@@ -1,0 +1,10 @@
+{
+  "name": "Alex Morgan — Full Stack Developer",
+  "short_name": "Alex Morgan",
+  "description": "Full Stack Developer portfolio",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F8F3EA",
+  "theme_color": "#C17B4A",
+  "icons": [{ "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" }]
+}
