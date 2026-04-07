@@ -9,9 +9,6 @@ import ScrollProgress from './components/ScrollProgress'
 import Navbar       from './components/Navbar'
 import Hero         from './components/Hero'
 
-// Below-fold sections -- lazy loaded
-// Each becomes its own chunk; browser fetches them only when needed.
-// Improves Lighthouse TTI and LCP significantly.
 const Services      = lazy(() => import('./components/Services'))
 const Skills     = lazy(() => import('./components/Skills'))
 const Projects   = lazy(() => import('./components/Projects'))

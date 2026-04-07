@@ -19,7 +19,7 @@ const navCols = [
   {
     title: 'More',
     links: [
-      { label: 'Blog',    id: 'blog'    },
+      // { label: 'Blog',    id: 'blog'    },
       { label: 'FAQs',    id: 'faqs'    },
       { label: 'Contact', id: 'contact' },
     ],
@@ -165,7 +165,7 @@ export default function Footer() {
         className="px-6 lg:px-10 py-16"
         style={{ borderBottom: '1px solid rgba(255,255,255,0.06)' }}
       >
-        <div className="max-w-7xl mx-auto grid md:grid-cols-[2fr_1fr_1fr_2fr] gap-12">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-[2fr_1fr_1fr] gap-12">
 
           {/* Brand */}
           <div>
@@ -270,7 +270,7 @@ export default function Footer() {
           ))}
 
           {/* Currently building */}
-          <div>
+          {/* <div>
             <p
               style={{
                 fontFamily: '"JetBrains Mono", monospace',
@@ -315,7 +315,7 @@ export default function Footer() {
                 Open-source React component library for design systems
               </p>
             </div>
-          </div>
+          </div> */}
 
         </div>
       </div>
