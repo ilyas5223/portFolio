@@ -260,21 +260,23 @@ function ProjectCard({ project, index }) {
               className="flex flex-wrap gap-3 pt-5"
               style={{ borderTop: '1px solid var(--border-soft)' }}
             >
-              <a
-                href={project.live}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-mag text-xs py-2.5 px-5"
-                data-cursor="hover"
-                aria-label={`View ${project.title} live demo (opens in new tab)`}
-              >
-                <span className="flex items-center gap-2">
-                  Live Demo
-                  <svg aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
-                    <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                </span>
-              </a>
+              {project.live && project.live !== '#' && (
+                <a
+                  href={project.live}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-mag text-xs py-2.5 px-5"
+                  data-cursor="hover"
+                  aria-label={`View ${project.title} live demo (opens in new tab)`}
+                >
+                  <span className="flex items-center gap-2">
+                    Live Demo
+                    <svg aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
+                      <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </span>
+                </a>
+              )}
                 <a
                 href={project.github}
                 target="_blank"

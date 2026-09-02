@@ -8,15 +8,14 @@ const marqueeItems = [
 
 /*
   Service copy is written in the same voice as the rest of this portfolio:
-  direct, evidence-backed, first-person, no marketing fluff.
-  Numbers and specifics are grounded in real experience documented
-  in Experience.jsx and FAQ.jsx.
+  direct, first-person, no marketing fluff. Claims point at real, shippable
+  evidence — the projects in Projects.jsx — instead of invented metrics.
 */
 const SERVICES = [
   {
     title: 'MVP & Product Launch',
     description:
-      "I've been the first engineering hire. I've taken a product from blank repo to 1,200 paying customers. I know which corners are safe to cut in v1 — and which ones will cost you at scale. I'll tell you the difference before we write a line of code.",
+      "I take a product from blank repo to production — SkyfurnitureCA (dual-currency e-commerce, built solo for a real client) and ragbase (a multi-tenant SaaS with Stripe billing) were both shipped this way. I know which corners are safe to cut in v1 — and which ones will cost you at scale.",
     outcome: 'Shipped fast. Built to survive what comes after launch.',
     tags: ['React', 'Node.js', 'PostgreSQL', 'Tailwind'],
   },
@@ -24,7 +23,7 @@ const SERVICES = [
     title: 'APIs & Backends',
     description:
       'Clean, observable APIs that hold up under real production load. I design systems I would want to inherit — documented, testable, with sensible error handling and the instrumentation to catch issues before users do.',
-    outcome: 'The same standard as systems processing 2M events/day.',
+    outcome: 'Rate-limited, validated, and documented — production-grade, not just working.',
     tags: ['Node.js', 'Express', 'Auth', 'RESTful APIs'],
   },
   {
@@ -37,7 +36,7 @@ const SERVICES = [
   {
     title: 'Performance & Refactors',
     description:
-      "I've dropped a critical query from 4,200ms to 85ms. Cut API p95 latency from 800ms to 280ms. Refactored large codebases with zero downtime and no regressions. Performance work is detective work — I like it.",
+      "I hunt down slow queries and bloated responses with the profiler open, not guesses. Refactored large codebases with zero downtime and no regressions. Performance work is detective work — I like it.",
     outcome: 'Measurable gains with benchmarks, not vague improvements.',
     tags: ['Audits', 'Optimization', 'Best practices'],
   },
