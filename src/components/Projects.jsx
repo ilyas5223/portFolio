@@ -38,32 +38,18 @@ const projects = [
   {
     id: 3,
     num: '03',
-    title: 'FinTrack Pro',
-    category: 'FinTech Dashboard',
-    year: '2023',
-    desc: 'Personal finance dashboard with real-time portfolio tracking, automated budgeting, and ML-powered spending insights. Mobile-first, data-rich design.',
-    impact: '8k active users · 4.8★ App Store rating · 180+ financial metrics',
-    stack: ['Vue.js', 'Express', 'PostgreSQL', 'D3.js', 'Plaid API', 'ML'],
-    live: '#',
-    github: '#',
-    featured: false,
+    title: 'ragbase',
+    category: 'AI SaaS',
+    year: '2026',
+    desc: 'Multi-tenant SaaS chatbot that answers support questions strictly from a company\'s own documentation. Crawls or ingests docs, chunks and embeds them, retrieves the relevant passages, and answers through an embeddable widget with citations back to the source page — no invented answers.',
+    impact: 'Full org/workspace multi-tenancy · Stripe-billed usage plans · Model-agnostic via OpenRouter',
+    stack: ['Next.js 16', 'React 19', 'TypeScript', 'Supabase', 'OpenRouter', 'Stripe', 'Vector embeddings'],
+    live: 'https://ragbase-azure.vercel.app',
+    github: 'https://github.com/ilyas5223/ragbase',
+    featured: true,
+    screenshot: '/screenshots/ragbase.jpg',
     mockupBg: '#F0FDF4',
     mockupAccent: '#16A34A',
-  },
-  {
-    id: 4,
-    num: '04',
-    title: 'DevConnect',
-    category: 'Developer Network',
-    year: '2023',
-    desc: 'Social platform for developers — share projects, find collaborators, join coding challenges. Real-time messaging, code snippet sharing, and GitHub integration.',
-    impact: '15k developers · 200+ daily active discussions · Open source core',
-    stack: ['React', 'GraphQL', 'Node.js', 'MongoDB', 'Socket.io', 'Docker'],
-    live: '#',
-    github: '#',
-    featured: false,
-    mockupBg: '#F0F9FF',
-    mockupAccent: '#0284C7',
   },
 ]
 
@@ -309,7 +295,7 @@ function ProjectCard({ project, index }) {
 
 export default function Projects() {
   const [filter, setFilter] = useState('All')
-  const cats = ['All', 'E-Commerce', 'SaaS', 'FinTech', 'Developer Tools']
+  const cats = ['All', 'E-Commerce', 'SaaS', 'Developer Tools']
 
   const filtered = filter === 'All'
     ? projects
