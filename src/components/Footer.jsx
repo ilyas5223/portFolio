@@ -197,7 +197,7 @@ export default function Footer() {
                 lineHeight: 1.7,
               }}
             >
-              Full Stack Developer crafting elegant, performant web experiences.
+              AI voice agents and automation, built by an engineer — not a no-code wrapper.
             </p>
 
             <div className="flex gap-4 mt-6">

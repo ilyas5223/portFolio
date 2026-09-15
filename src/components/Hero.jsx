@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { useReducedMotion } from '../hooks/useReducedMotion'
 
-const roles = ['Full Stack Developer', 'React Architect', 'API Designer', 'System Builder']
+const roles = ['AI Voice Agent Engineer', 'Automation Engineer · n8n', 'Outreach Systems Builder', 'Full Stack Developer']
 
 function StatCounter({ value, label }) {
   const [displayed, setDisplayed] = useState('0')
@@ -274,8 +274,9 @@ export default function Hero() {
               className="body-text mt-8 max-w-xl"
               style={{ animation: 'fadeUp 0.8s var(--ease-expo) 2.35s both' }}
             >
-              I build scalable, secure and beautifully crafted web applications -- from database to deployment. 
-              Five years of turning complex problems into elegant, maintainable solutions that users love.
+              I build AI voice agents that answer in two rings, book the appointment, and log every
+              call to a dashboard you can actually read -- plus the n8n automations and outreach
+              systems behind them. Engineer-built, not two no-code tools taped together.
             </p>
 
             {/* CTAs */}
@@ -369,30 +370,31 @@ export default function Hero() {
                   >
                     Ali Ilyas
                   </p>
-                  <p className="mono-sm mt-1">Full Stack Developer</p>
+                  <p className="mono-sm mt-1">Voice AI &amp; Automation Engineer</p>
                 </div>
 
-                {/* Tech chips floating */}
-                <div className="space-y-3">
+                {/*
+                  Was three self-assigned skill percentages (95/92/88). Replaced with
+                  what I actually build -- a prospect can verify these against the
+                  Projects section; nobody can verify "92%".
+                */}
+                <div className="space-y-2.5">
                   {[
-                    { label: 'React / Next.js', pct: 95 },
-                    { label: 'Node.js', pct: 92 },
-                    { label: 'PostgreSQL', pct: 88 },
+                    'Voice agents on VAPI / Retell',
+                    'Call dashboards with transcripts',
+                    'n8n workflows built to not break',
+                    'Cold outreach infrastructure',
                   ].map((item) => (
-                    <div key={item.label}>
-                      <div className="flex justify-between mb-1">
-                        <span className="mono-sm" style={{ color: 'var(--ink-soft)' }}>{item.label}</span>
-                        <span className="mono-sm">{item.pct}%</span>
-                      </div>
-                      <div className="skill-progress">
-                        <div
-                          className="skill-progress-fill"
-                          style={{
-                            '--target-width': `${item.pct}%`,
-                            width: `${item.pct}%`,
-                          }}
-                        />
-                      </div>
+                    <div key={item} className="flex items-start gap-2.5">
+                      <span
+                        aria-hidden="true"
+                        style={{ color: 'var(--accent)', fontSize: '0.5rem', lineHeight: '1.5rem' }}
+                      >
+                        ✦
+                      </span>
+                      <span className="mono-sm" style={{ color: 'var(--ink-soft)', lineHeight: 1.5 }}>
+                        {item}
+                      </span>
                     </div>
                   ))}
                 </div>
@@ -415,19 +417,19 @@ export default function Hero() {
                 className="absolute -right-16 top-12 chip animate-float"
                 style={{ animationDelay: '0s' }}
               >
-                TypeScript
+                VAPI
               </div>
               <div
                 className="absolute -left-16 bottom-20 chip animate-float"
                 style={{ animationDelay: '1.5s' }}
               >
-                RESTful API
+                Retell AI
               </div>
               <div
                 className="absolute -right-14 bottom-32 chip animate-float"
                 style={{ animationDelay: '0.8s' }}
               >
-                OAuth 2.0
+                n8n
               </div>
             </div>
           </div>

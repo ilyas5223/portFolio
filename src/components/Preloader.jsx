@@ -161,7 +161,7 @@ export default function Preloader({ onDone }) {
         className="absolute bottom-8 right-10 mono-sm tracking-widest opacity-40"
         style={{ color: '#F8F3EA' }}
       >
-        ✦ Full Stack Developer
+        ✦ Voice AI &amp; Automation Engineer
       </div>
     </div>
   )

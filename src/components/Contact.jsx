@@ -31,11 +31,12 @@ const socials = [
 ]
 
 const WHAT_YOU_GET = [
-  'MVPs & new product builds',
-  'Performance & UX improvements',
-  'Dashboards & internal tools',
-  'Codebase audits & refactors',
-  'APIs, auth & integrations',
+  'AI voice agents + call dashboard',
+  'Cold outreach engines you own',
+  'Broken automation rescue',
+  'n8n & Make.com builds',
+  'RAG chatbots over your docs',
+  'Custom endpoints & CRM sync',
 ]
 
 export default function Contact() {
@@ -107,15 +108,16 @@ export default function Contact() {
             className="display-xl reveal-up delay-1"
             style={{ maxWidth: '14ch', margin: '0 auto', textAlign: 'center' }}
           >
-            Let's build something{' '}
+            Tell me what is{' '}
             <span style={{
               color: 'var(--accent)',
               borderBottom: '3px solid var(--accent)',
               paddingBottom: '0.05em',
-            }}>remarkable</span>
+            }}>ringing out</span>
           </h2>
           <p className="body-text reveal-up delay-2 mt-6 mx-auto" style={{ maxWidth: '46ch', textAlign: 'center' }}>
-            Whether you have a project in mind, a role to discuss, or just want to say hello — I'd love to hear from you.
+            Missed calls after hours, an automation that quietly broke, or a pipeline that sends nothing.
+            Describe it in two lines and I will tell you whether I can help — including when the answer is no.
           </p>
         </div>
 
@@ -159,9 +161,9 @@ export default function Contact() {
               </p>
 
               <p className="body-text" style={{ fontSize: '0.8rem', lineHeight: 1.7, marginBottom: '1.1rem' }}>
-                Senior-level frontend and backend in one person. Clear
-                communication, fast feedback cycles, and code built to keep
-                iterating on after we ship.
+                Built by an engineer, not assembled from no-code parts. Everything
+                runs in your own accounts and your own name, so you can hand it to
+                anyone later — including someone who is not me.
               </p>
 
               <div
@@ -280,7 +282,7 @@ export default function Contact() {
                   Message received.
                 </h3>
                 <p className="body-text mb-8" style={{ maxWidth: '36ch' }}>
-                  I'll be in touch within 24 hours. Looking forward to learning more about your project.
+                  I'll be in touch within 24 hours — usually the same day if you wrote during UK or European hours.
                 </p>
                 <button
                   onClick={() => { setStatus('idle'); setErrors({}) }}

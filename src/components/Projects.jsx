@@ -3,8 +3,53 @@ import { useReducedMotion } from '../hooks/useReducedMotion'
 
 const projects = [
   {
-    id: 1,
+    id: 6,
     num: '01',
+    title: 'AI Receptionist + Call Dashboard',
+    category: 'Voice AI',
+    year: '2026',
+    desc: 'Inbound voice agent for appointment-based businesses: answers in two rings, holds a real conversation, checks live availability and books straight into the calendar. The half nobody else ships is the dashboard — every call lands there with its transcript, recording, response latency and whether it actually booked. Runs on VAPI or Retell with a custom function endpoint for the booking logic, so the response time stays under half a second instead of the three-second pause that makes callers hang up.',
+    impact: 'Sub-second responses · Every call auditable · Client owns the account and the number',
+    stack: ['VAPI', 'Retell AI', 'Next.js', 'TypeScript', 'Supabase', 'Twilio'],
+    live: '#',
+    github: '#',
+    featured: true,
+    mockupBg: '#FFF7ED',
+    mockupAccent: '#C17B4A',
+  },
+  {
+    id: 7,
+    num: '02',
+    title: 'Liverpool Booking Sites',
+    category: 'Local Business Automation',
+    year: '2026',
+    desc: 'Five booking sites built for independent barbers and nail salons in Liverpool, each from that business’s real Google listing — services, hours, area, rating — with a booking path that goes wherever that shop actually takes bookings. Built as the front door to a receptionist upsell: the site is cheap to deliver, and the businesses that need it are the same ones losing after-hours calls to voicemail. Screenshot-led one-pager collects all five.',
+    impact: '5 sites live and verified · Real listing data, no lorem ipsum · Booking paths tested, not assumed',
+    stack: ['HTML', 'Tailwind CSS', 'Vercel', 'Playwright', 'Apify'],
+    live: 'https://ali-booking-sites.vercel.app',
+    github: '#',
+    featured: true,
+    mockupBg: '#F0F9FF',
+    mockupAccent: '#0369A1',
+  },
+  {
+    id: 8,
+    num: '03',
+    title: 'n8n Reliability Workflows',
+    category: 'Automation',
+    year: '2026',
+    desc: 'Eight workflows covering the things a half-built automation is always missing: a global error handler, an idempotency guard so a retry stops re-firing the same record, a heartbeat watchdog that tells you a job died instead of waiting for a customer to, and a human approval gate. This is the inventory behind the rescue work — when someone says their automation silently duplicated everything, the cause is usually already sitting in one of these files.',
+    impact: 'Retry-safe by default · Failures alert you, not your customers · Reusable across clients',
+    stack: ['n8n', 'JavaScript', 'Webhooks', 'Make.com'],
+    live: '#',
+    github: '#',
+    featured: false,
+    mockupBg: '#F5F3FF',
+    mockupAccent: '#7C3AED',
+  },
+  {
+    id: 1,
+    num: '04',
     title: 'SkyfurnitureCA',
     category: 'E-Commerce Platform',
     year: '2025',
@@ -21,7 +66,7 @@ const projects = [
   },
   {
     id: 2,
-    num: '02',
+    num: '05',
     title: 'DocSearch',
     category: 'Developer Tools',
     year: '2026',
@@ -37,7 +82,7 @@ const projects = [
   },
   {
     id: 3,
-    num: '03',
+    num: '06',
     title: 'ragbase',
     category: 'AI SaaS',
     year: '2026',
@@ -277,16 +322,18 @@ function ProjectCard({ project, index }) {
                   </span>
                 </a>
               )}
+              {project.github && project.github !== '#' && (
                 <a
-                href={project.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-ghost text-xs py-2.5 px-5"
-                data-cursor="hover"
-                aria-label={`View ${project.title} source code on GitHub (opens in new tab)`}
-              >
-                GitHub
-              </a>
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-ghost text-xs py-2.5 px-5"
+                  data-cursor="hover"
+                  aria-label={`View ${project.title} source code on GitHub (opens in new tab)`}
+                >
+                  GitHub
+                </a>
+              )}
             </div>
           </div>
         </div>
@@ -297,7 +344,7 @@ function ProjectCard({ project, index }) {
 
 export default function Projects() {
   const [filter, setFilter] = useState('All')
-  const cats = ['All', 'E-Commerce', 'SaaS', 'Developer Tools']
+  const cats = ['All', 'Voice AI', 'Automation', 'AI SaaS', 'E-Commerce', 'Developer Tools']
 
   const filtered = filter === 'All'
     ? projects

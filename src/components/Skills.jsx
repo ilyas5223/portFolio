@@ -5,6 +5,30 @@ const BAND_LABELS = { 1: 'Proficient', 2: 'Advanced', 3: 'Expert' }
 
 const categories = [
   {
+    label: 'Voice AI & Automation',
+    icon: '◐',
+    color: '#C17B4A',
+    skills: [
+      { name: 'VAPI / Retell AI',    years: 1, band: 3 },
+      { name: 'n8n workflows',       years: 1, band: 3 },
+      { name: 'Call logging & QA',   years: 1, band: 3 },
+      { name: 'Booking / CRM sync',  years: 1, band: 2 },
+      { name: 'Make.com',            years: 1, band: 2 },
+    ],
+  },
+  {
+    label: 'Outreach Infrastructure',
+    icon: '◎',
+    color: '#8B6F5E',
+    skills: [
+      { name: 'Lead scraping',       years: 1, band: 3 },
+      { name: 'Email verification',  years: 1, band: 3 },
+      { name: 'SPF / DKIM / DMARC',  years: 1, band: 2 },
+      { name: 'Domain warmup',       years: 1, band: 2 },
+      { name: 'Sequence copy',       years: 1, band: 2 },
+    ],
+  },
+  {
     label: 'Frontend',
     icon: '◈',
     color: '#C17B4A',
@@ -198,7 +222,7 @@ export default function Skills() {
 
   const active = categories[activeIdx]
 
-  const tools = ['VS Code', 'Figma', 'Postman','Bash', 'Neon.db', 'GitHub Actions']
+  const tools = ['VAPI', 'Retell AI', 'n8n', 'Twilio', 'Supabase', 'Apify', 'Postman', 'VS Code', 'Bash', 'GitHub Actions']
 
   return (
     <section
@@ -226,7 +250,8 @@ export default function Skills() {
           <p
             className="body-text reveal-up delay-2 max-w-sm text-left md:text-right"
           >
-            Constantly evolving. Always improving. Building with the right tool for the job.
+            Voice and automation first — that is what I sell. The full-stack years underneath are
+            why the custom parts work when the no-code route runs out.
           </p>
         </div>
 

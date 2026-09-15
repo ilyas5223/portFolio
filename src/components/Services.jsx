@@ -2,8 +2,10 @@ import { useEffect, useRef } from 'react'
 import Marquee from './Marquee'
 
 const marqueeItems = [
-  'JavaScript', 'Tailwind CSS', 'Bootstrap', 'React', 'Next.js', 'TypeScript', 'Node.js', 'PostgreSQL',
-  'RESTful API', 'OAuth2.0', 'Express', 'bcrypt', 'Hostinger', 'Vercel', 'GitHub Version control', 'Test-driven development', 'Performance optimization', 'SEO best practices',
+  'VAPI', 'Retell AI', 'n8n', 'Make.com', 'Twilio', 'Call transcripts', 'Sub-second latency',
+  'Calendar booking logic', 'CRM sync', 'Idempotency guards', 'Error alerting', 'Cold email infrastructure',
+  'SPF / DKIM / DMARC', 'Lead scraping & verification', 'Next.js', 'React', 'TypeScript', 'Node.js',
+  'Supabase', 'PostgreSQL', 'Vercel',
 ]
 
 /*
@@ -13,32 +15,32 @@ const marqueeItems = [
 */
 const SERVICES = [
   {
-    title: 'MVP & Product Launch',
+    title: 'AI Voice Agent, With Receipts',
     description:
-      "I take a product from blank repo to production — SkyfurnitureCA (dual-currency e-commerce, built solo for a real client) and ragbase (a multi-tenant SaaS with Stripe billing) were both shipped this way. I know which corners are safe to cut in v1 — and which ones will cost you at scale.",
-    outcome: 'Shipped fast. Built to survive what comes after launch.',
-    tags: ['React', 'Node.js', 'PostgreSQL', 'Tailwind'],
+      "An inbound agent that answers in two rings, checks real availability and books the appointment — plus the dashboard that shows you every call, transcript, latency figure and outcome. Most AI receptionists are a black box; you never find out what yours said or why a caller hung up. With this one you are checking the agent, not trusting it.",
+    outcome: 'Live in a week. Runs on your own account, in your name.',
+    tags: ['VAPI', 'Retell AI', 'Twilio', 'Supabase'],
   },
   {
-    title: 'APIs & Backends',
+    title: 'Cold Outreach Engine',
     description:
-      'Clean, observable APIs that hold up under real production load. I design systems I would want to inherit — documented, testable, with sensible error handling and the instrumentation to catch issues before users do.',
-    outcome: 'Rate-limited, validated, and documented — production-grade, not just working.',
-    tags: ['Node.js', 'Express', 'Auth', 'RESTful APIs'],
+      'ICP definition, a verified lead list scraped and enriched, a three-email sequence written in your voice, and sending infrastructure on your own domain — warmed, authenticated, capped. You own every piece of it. I am not renting you a seat in a tool you lose access to when we stop working together.',
+    outcome: 'Bounce rate under 3%, or I rebuild the list free.',
+    tags: ['Lead scraping', 'Email verification', 'SPF/DKIM/DMARC', 'Sequencing'],
   },
   {
-    title: 'Dashboards & Internal Tools',
+    title: 'Automation Rescue',
     description:
-      'The best internal tool is the one your team actually uses. I build admin panels and operational dashboards with the same care as customer-facing products — because the people using them are your team, and their time matters.',
-    outcome: 'Less manual ops. More time for work that actually matters.',
-    tags: ['React', 'Charts', 'Role-based access'],
+      "The “it worked until it didn't” jobs. I diagnose and fix n8n, Make and voice-agent builds someone else half-finished — usually a missing idempotency guard re-firing records on retry, or no error alerting so nothing lands in the logs. Diagnosis is free; I will tell you if it is not worth fixing.",
+    outcome: 'Named probable cause before you pay. Fixed in 24–48 hours.',
+    tags: ['n8n', 'Make.com', 'Debugging', 'Error alerting'],
   },
   {
-    title: 'Performance & Refactors',
+    title: 'The Backend No-Code Can’t Reach',
     description:
-      "I hunt down slow queries and bloated responses with the profiler open, not guesses. Refactored large codebases with zero downtime and no regressions. Performance work is detective work — I like it.",
-    outcome: 'Measurable gains with benchmarks, not vague improvements.',
-    tags: ['Audits', 'Optimization', 'Best practices'],
+      'Where the automation stops and real software starts: custom function endpoints, CRM sync, multi-tenant dashboards, RAG over your own documentation. SkyfurnitureCA (dual-currency e-commerce, built solo for a real client) and ragbase (multi-tenant SaaS with Stripe billing) were both shipped this way.',
+    outcome: 'The part that makes the agent fast instead of almost working.',
+    tags: ['Next.js', 'React', 'Node.js', 'PostgreSQL'],
   },
 ]
 
@@ -93,23 +95,24 @@ export default function About() {
 
             <div className="grid lg:grid-cols-2 gap-6 items-end">
               <h2 className="display-lg reveal-up delay-1">
-                Full-stack work,<br />
+                Automation that<br />
                 <span style={{
                   color: 'var(--accent)',
                   textDecoration: 'underline',
                   textDecorationThickness: '3px',
                   textUnderlineOffset: '6px',
-                }}>done right.</span>
+                }}>you can audit.</span>
               </h2>
 
               <p
                 className="body-text reveal-up delay-2"
                 style={{ maxWidth: '52ch' }}
               >
-                I take on select projects where I can do my best work —
-                greenfield builds, scaling challenges, and codebases that need
-                a clear path forward. I ask why before how. And I care about
-                what happens after launch.
+                Most people building voice agents and automations are marketers
+                wiring two no-code tools together — and it works until your
+                calendar changes. I am an engineer, so the booking logic, the
+                CRM sync and the dashboard are all custom. That is also why you
+                get to see inside instead of taking my word for it.
               </p>
             </div>
           </div>

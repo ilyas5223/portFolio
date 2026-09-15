@@ -5,35 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Primary Meta -->
-    <title>Ali Ilyas — Full Stack Developer</title>
-    <meta name="description" content="Full Stack Developer crafting scalable, production-ready web applications for clients worldwide. Based in Punjab, Pakistan. Available for freelance and contract work." />
+    <title>Ali Ilyas — AI Voice Agents &amp; Automation, Built by an Engineer</title>
+    <meta name="description" content="I build AI voice agents that book appointments and show you every call — plus n8n automations and cold outreach systems. Engineer-built, not a no-code wrapper. Available for freelance and contract work." />
     <meta name="author" content="Ali Ilyas" />
     <meta name="theme-color" content="#F8F3EA" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#0D0D0F"  media="(prefers-color-scheme: dark)"  />
-    <link rel="canonical" href="https://aliilyas.dev/" />
+    <link rel="canonical" href="https://aliilyas.vercel.app/" />
 
     <!-- Open Graph -->
     <meta property="og:type"         content="website" />
-    <meta property="og:url"          content="https://aliilyas.dev/" />
-    <meta property="og:title"        content="Ali Ilyas — Full Stack Developer" />
-    <meta property="og:description"  content="Building scalable web applications from database to deployment. Available for freelance and contract work." />
-    <meta property="og:image"        content="https://aliilyas.dev/og-image.png" />
-    <meta property="og:image:width"  content="1200" />
-    <meta property="og:image:height" content="630" />
+    <meta property="og:url"          content="https://aliilyas.vercel.app/" />
+    <meta property="og:title"        content="Ali Ilyas — AI Voice Agents &amp; Automation, Built by an Engineer" />
+    <meta property="og:description"  content="AI voice agents that book appointments and log every call to a dashboard you can read. n8n automation, and cold outreach systems you own outright." />
     <meta property="og:locale"       content="en_US" />
-    <meta property="og:site_name"    content="Ali Ilyas Portfolio" />
+    <meta property="og:site_name"    content="Ali Ilyas" />
 
     <!-- Twitter / X Card -->
-    <meta name="twitter:card"        content="summary_large_image" />
-    <meta name="twitter:site"        content="@aliilyas_dev" />
-    <meta name="twitter:creator"     content="@aliilyas_dev" />
-    <meta name="twitter:title"       content="Ali Ilyas — Full Stack Developer" />
-    <meta name="twitter:description" content="Building scalable web applications from database to deployment." />
-    <meta name="twitter:image"       content="https://aliilyas.dev/og-image.png" />
+    <meta name="twitter:card"        content="summary" />
+    <meta name="twitter:site"        content="@Ily5223" />
+    <meta name="twitter:creator"     content="@Ily5223" />
+    <meta name="twitter:title"       content="Ali Ilyas — AI Voice Agents &amp; Automation" />
+    <meta name="twitter:description" content="Voice agents that book appointments and show you every call. n8n automation. Outreach systems you own." />
 
     <!-- Favicon + PWA -->
     <link rel="icon"             type="image/svg+xml" href="/favicon.svg" />
-    <link rel="apple-touch-icon"                      href="/apple-touch-icon.png" />
     <link rel="manifest"                              href="/site.webmanifest" />
 
     <!-- JSON-LD Person structured data -->
@@ -42,10 +37,9 @@
       "@context": "https://schema.org",
       "@type": "Person",
       "name": "Ali Ilyas",
-      "url": "https://aliilyas.dev",
-      "image": "https://aliilyas.dev/og-image.png",
-      "jobTitle": "Full Stack Developer",
-      "description": "Full Stack Developer crafting scalable, production-ready web applications for clients worldwide.",
+      "url": "https://aliilyas.vercel.app",
+      "jobTitle": "AI Voice Agent & Automation Engineer",
+      "description": "Engineer building AI voice agents with call-level observability, n8n automation systems, and cold outreach infrastructure for small businesses and B2B agencies.",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Punjab",
@@ -54,15 +48,36 @@
       },
       "sameAs": [
         "https://github.com/ilyas5223",
-        "https://linkedin.com/in/aliilyas",
-        "https://twitter.com/aliilyas_dev"
+        "https://www.linkedin.com/in/ali-ilyas-b343463a8/",
+        "https://x.com/Ily5223"
       ],
-      "knowsAbout": ["React","Next.js","TypeScript","Node.js","PostgreSQL","AWS","Docker","GraphQL","Python"],
-      "offers": {
-        "@type": "Offer",
-        "description": "Freelance and contract Full Stack Development",
-        "availability": "https://schema.org/InStock"
-      }
+      "knowsAbout": ["AI voice agents","VAPI","Retell AI","n8n","Workflow automation","Cold email infrastructure","Lead generation","RAG chatbots","React","Next.js","TypeScript","Node.js","PostgreSQL","Supabase"],
+      "makesOffer": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "AI voice agent build",
+            "description": "Inbound voice agent that answers in two rings, checks real availability and books the appointment — with a dashboard showing every call, transcript, latency figure and outcome."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Cold outreach engine",
+            "description": "Verified lead list, three-email sequence and sending infrastructure on your own domain. You own every piece."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Automation rescue",
+            "description": "Diagnose and repair n8n, Make or voice-agent builds that stopped working. Fixed in 24-48 hours."
+          }
+        }
+      ]
     }
     </script>
 
@@ -81,6 +96,23 @@
     <style>
       html      { background: #F8F3EA; }
       html.dark { background: #0D0D0F; }
+      /*
+        Static fallback inside #root. React's createRoot() clears these children
+        on first render, so real visitors never see it — but link-preview
+        fetchers, AI crawlers and anything that does not execute JS read this
+        instead of an empty div. Do not delete: without it the page has no
+        crawlable content at all.
+      */
+      #root-fallback { max-width: 62rem; margin: 0 auto; padding: 4rem 1.5rem;
+        font-family: "Outfit", -apple-system, BlinkMacSystemFont, sans-serif;
+        color: #2A2622; line-height: 1.7; }
+      #root-fallback h1 { font-family: "Fraunces", Georgia, serif; font-weight: 300;
+        font-size: clamp(2rem, 6vw, 3.5rem); line-height: 1.05; margin: 0 0 1rem; }
+      #root-fallback h2 { font-family: "Playfair Display", Georgia, serif; font-weight: 500;
+        font-size: 1.15rem; margin: 2rem 0 0.5rem; }
+      #root-fallback p, #root-fallback li { font-size: 1rem; }
+      #root-fallback a { color: #C17B4A; }
+      @media (prefers-color-scheme: dark) { #root-fallback { color: #F0E8D8; } }
     </style>
   </head>
 
@@ -104,7 +136,61 @@
       onblur="this.style.top='-120px'"
     >Skip to main content</a>
 
-    <div id="root"></div>
+    <div id="root">
+      <div id="root-fallback">
+        <h1>Ali Ilyas — AI voice agents and automation, built by an engineer.</h1>
+        <p>
+          Most AI receptionists are a black box: you never find out what the agent said
+          or why a caller hung up. Mine books the appointment <em>and</em> shows you every
+          call that led to it — transcript, recording, response latency, outcome.
+        </p>
+
+        <h2>What I build</h2>
+        <ul>
+          <li>
+            <strong>AI voice agents (VAPI, Retell).</strong> Inbound agents that answer in two
+            rings, check real availability and book straight into the calendar — with a call
+            dashboard, so you are checking the agent rather than trusting it. Sub-second
+            response times, custom booking logic, CRM sync.
+          </li>
+          <li>
+            <strong>Cold outreach engines.</strong> ICP definition, verified lead list,
+            a three-email sequence in your voice, and sending infrastructure on your own
+            domain. You own every piece — no renting a seat in someone else's tool.
+          </li>
+          <li>
+            <strong>Automation rescue and n8n builds.</strong> Diagnosing and repairing
+            automations someone else half-built: idempotency guards, error alerting,
+            heartbeat watchdogs, approval gates. Usually fixed in 24–48 hours.
+          </li>
+          <li>
+            <strong>Full-stack product work.</strong> The backend the no-code crowd cannot
+            build: Next.js, React, TypeScript, Node, PostgreSQL, Supabase. Shipped
+            SkyfurnitureCA (dual-currency e-commerce for a real client) and ragbase
+            (multi-tenant RAG SaaS with Stripe billing).
+          </li>
+        </ul>
+
+        <h2>Why me over a no-code marketer</h2>
+        <p>
+          Most people selling voice agents wire two no-code tools together, and it works
+          until your calendar changes. The jobs they keep failing at — latency, custom
+          function endpoints, CRM sync, call logging — are the ones I find easy, because
+          I build the backend myself.
+        </p>
+
+        <h2>Contact</h2>
+        <p>
+          Punjab, Pakistan (PKT) · Available for freelance and contract work ·
+          <a href="mailto:aliilyas5223@gmail.com">aliilyas5223@gmail.com</a> ·
+          <a href="https://github.com/ilyas5223">GitHub</a> ·
+          <a href="https://www.linkedin.com/in/ali-ilyas-b343463a8/">LinkedIn</a>
+        </p>
+        <noscript>
+          <p>The interactive version of this portfolio needs JavaScript. Everything above is the full summary.</p>
+        </noscript>
+      </div>
+    </div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

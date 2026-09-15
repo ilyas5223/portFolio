@@ -2,44 +2,54 @@ import React, { useState, useRef } from 'react'
 
 const faqs = [
   {
-    q: 'Are you available for freelance or contract work?',
-    a: "Yes -- I take on select freelance and contract projects alongside my full-time work. I'm particularly drawn to challenging problems: SaaS platforms, complex APIs, performance audits, and greenfield builds. Reach out with your project details and let's see if we're a good fit.",
-    tag: 'Availability',
+    q: 'What exactly do you build?',
+    a: "Three things. AI voice agents that answer the phone, check availability and book the appointment -- with a dashboard showing every call, transcript and latency figure. Cold outreach engines: verified lead list, sequence, and sending infrastructure on your own domain. And rescue work on automations or agents someone else half-built. Everything else on this page is the engineering underneath those.",
+    tag: 'Services',
   },
   {
-    q: "What's your typical project process?",
-    a: 'I follow a 5-phase approach: Discovery (understanding goals and constraints), Architecture (tech stack + system design), Development (iterative builds with weekly check-ins), QA & Testing (automated + manual), and finally Deployment & Handoff with complete documentation.',
-    tag: 'Process',
+    q: 'Why does the dashboard matter so much?',
+    a: "Because without it you are trusting the agent instead of checking it. Most AI receptionists are a black box -- you never find out what yours said, or why a caller hung up. Mine logs every call with the transcript, recording, response latency and whether it actually booked. In week one you read those transcripts and tell me what to tighten. None of the cheap voice builds ship this, and every serious voice product does.",
+    tag: 'Voice AI',
   },
   {
-    q: 'Do you work with designers, or can you handle design too?',
-    a: "Both. I love collaborating with talented designers and can translate Figma designs with pixel-perfect precision. For smaller projects, I can handle UI/UX design myself -- years of implementation work has sharpened my design eye considerably.",
-    tag: 'Design',
-  },
-  {
-    q: "What's your preferred tech stack?",
-    a: 'For most web applications: React/Next.js frontend, Node.js or Python/FastAPI backend, PostgreSQL as the primary datastore, Redis for caching, and AWS or Vercel for hosting. That said, I choose tools based on the problem -- I\'m framework-agnostic when the situation calls for it.',
-    tag: 'Technical',
-  },
-  {
-    q: 'Can you work on an existing legacy codebase?',
-    a: "Absolutely -- and I actually enjoy it. There's a detective element to understanding legacy decisions and finding the safest path forward. I've successfully refactored several large codebases with zero downtime and no regressions.",
-    tag: 'Technical',
-  },
-  {
-    q: 'How do you handle communication during a project?',
-    a: "Transparency is core to how I work. I provide weekly progress updates, use Linear or Notion for project management, and am available during business hours across timezones. You'll never be left wondering where things stand.",
-    tag: 'Process',
-  },
-  {
-    q: 'What makes you different from other full-stack developers?',
-    a: "I combine deep technical expertise with product thinking and strong communication. I ask 'why' before 'how'. I care about building things that are maintainable, scalable, and actually solve the problem -- not just technically impressive.",
+    q: 'What makes you different from the no-code crowd?',
+    a: "Most people selling voice agents and automations are marketers who can wire two no-code tools together. That works until your calendar changes. I am an engineer -- the booking logic, the custom function endpoints, the CRM sync and the dashboard are all code I wrote. That is why the response time lands under half a second instead of the three-second pause that makes callers hang up, and why the jobs they keep failing at are the ones I find straightforward.",
     tag: 'General',
   },
   {
-    q: "What's your availability like?",
-    a: "I'm based in San Francisco (PST) and typically take on 1-2 freelance projects at a time to ensure quality. For contract work, I can commit 20-40 hours/week. For full-time opportunities, I'm open to discussions.",
+    q: 'What happens if you disappear?',
+    a: "Everything runs in your own account, in your name, on your card -- the phone number, the platform, the domain. I record a short handover video showing whoever runs your front desk how to change the hours and the script. If I vanished tomorrow it would keep running, and you could hand it to anyone.",
+    tag: 'Ownership',
+  },
+  {
+    q: 'Can you guarantee results?',
+    a: "No, and anyone who does is either lying or padding the price to cover the lie. What I guarantee is the deliverable: for outreach, a verified list with bounce rate under 3% -- over 5% and I rebuild it free. For voice, an agent that survives you trying to break it on a call with me before you pay. Results depend on your offer and your market, which are not mine to promise.",
+    tag: 'Expectations',
+  },
+  {
+    q: 'Is cold email going to burn my domain?',
+    a: "It would, from your main domain at volume. So I never send from it. Separate lookalike domain, its own inboxes, warmed for two weeks, capped around forty a day per inbox, SPF/DKIM/DMARC configured properly, and a real unsubscribe in every message. Your primary domain never sends a single cold email.",
+    tag: 'Outreach',
+  },
+  {
+    q: 'My automation broke and I did not build it. Can you fix it?',
+    a: "Usually, and this is the work I like most. Give me read access and I will tell you the probable cause in about twenty minutes -- often a missing idempotency guard re-firing records on retry, which shows up as duplicates rather than errors, which is why nothing is in your logs. Diagnosis is free. If it is not worth fixing I will say so rather than bill you to find out.",
+    tag: 'Rescue',
+  },
+  {
+    q: 'Where are you based, and what is your availability?',
+    a: "Punjab, Pakistan -- PKT, which is UTC+5. In practice I overlap comfortably with UK and European mornings and can take US East Coast calls in my evening. I take on a small number of projects at a time so delivery stays on the timeline I quoted: a voice agent live in about a week, an outreach engine in five to seven days, rescue work in 24 to 48 hours.",
     tag: 'Availability',
+  },
+  {
+    q: 'What is your stack?',
+    a: "VAPI and Retell for voice, n8n for automation, Twilio for telephony, Next.js and React on the front, Node and TypeScript behind it, Supabase or PostgreSQL for data, Vercel for hosting. Apify for scraping. I pick per problem rather than per habit, but that is the combination I reach for.",
+    tag: 'Technical',
+  },
+  {
+    q: 'Will you do the full-stack work too -- dashboards, APIs, a RAG chatbot?',
+    a: "Yes, and it is where the interesting problems are: multi-tenant dashboards, custom endpoints, RAG over your own documentation with citations back to the source page. SkyfurnitureCA and ragbase in the Projects section were both built this way. In practice this tends to start as an add-on to an automation or voice project rather than as the first thing we do together.",
+    tag: 'Technical',
   },
 ]
 
