@@ -1,4 +1,3 @@
-import { useEffect, useRef } from 'react'
 import Marquee from './Marquee'
 
 const marqueeItems = [
@@ -44,43 +43,6 @@ const SERVICES = [
   },
 ]
 
-function TiltCard({ children }) {
-  const cardRef = useRef(null)
-
-  useEffect(() => {
-    const card = cardRef.current
-    if (!card) return
-    if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
-
-    const onMove = (e) => {
-      const rect = card.getBoundingClientRect()
-      const x = (e.clientX - rect.left) / rect.width - 0.5
-      const y = (e.clientY - rect.top) / rect.height - 0.5
-      card.style.transform = `perspective(800px) rotateX(${y * -8}deg) rotateY(${x * 8}deg) scale(1.02)`
-    }
-    const onLeave = () => {
-      card.style.transform = 'perspective(800px) rotateX(0deg) rotateY(0deg) scale(1)'
-    }
-
-    card.addEventListener('mousemove', onMove)
-    card.addEventListener('mouseleave', onLeave)
-    return () => {
-      card.removeEventListener('mousemove', onMove)
-      card.removeEventListener('mouseleave', onLeave)
-    }
-  }, [])
-
-  return (
-    <div
-      ref={cardRef}
-      style={{ transition: 'transform 0.3s var(--ease-expo)', willChange: 'transform' }}
-    >
-      {children}
-    </div>
-  )
-}
-
 export default function About() {
   return (
     <>
@@ -120,8 +82,8 @@ export default function About() {
           {/* ── Service Cards Grid ── */}
           <div className="grid sm:grid-cols-2 gap-5">
             {SERVICES.map((service, i) => (
-              <TiltCard key={service.title}>
                 <article
+                  key={service.title}
                   className={`reveal-scale delay-${i + 1} h-full`}
                   style={{
                     background: 'var(--white)',
@@ -129,16 +91,24 @@ export default function About() {
                     padding: '2rem',
                     display: 'flex',
                     flexDirection: 'column',
-                    transition: 'border-color 0.3s ease, box-shadow 0.3s ease',
+                    /*
+                      No 3D tilt and no soft glow here on purpose. The card used
+                      to rotate on perspective() and carry a wide accent-coloured
+                      shadow; the transform promoted the card to its own GPU layer,
+                      which re-rasterised the body copy and left it visibly blurred,
+                      and the shadow washed the text at the card edges. A flat lift
+                      plus a border colour reads the same and keeps the text sharp.
+                    */
+                    transition: 'border-color 0.3s ease, transform 0.3s var(--ease-expo)',
                   }}
                   data-cursor="hover"
                   onMouseEnter={e => {
                     e.currentTarget.style.borderColor = 'var(--accent)'
-                    e.currentTarget.style.boxShadow = '0 8px 32px -8px rgba(193,123,74,0.15)'
+                    e.currentTarget.style.transform = 'translateY(-3px)'
                   }}
                   onMouseLeave={e => {
                     e.currentTarget.style.borderColor = 'var(--border)'
-                    e.currentTarget.style.boxShadow = 'none'
+                    e.currentTarget.style.transform = 'none'
                   }}
                 >
                   {/* Index */}
@@ -206,7 +176,6 @@ export default function About() {
                     ))}
                   </div>
                 </article>
-              </TiltCard>
             ))}
           </div>
 
