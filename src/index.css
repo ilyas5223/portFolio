@@ -578,7 +578,7 @@ body {
   overflow: hidden;
   background: var(--white);
   border: 1px solid var(--border);
-  transition: border-color 0.4s ease, box-shadow 0.4s ease;
+  transition: border-color 0.4s ease, box-shadow 0.4s ease, transform 0.3s var(--ease-expo);
 }
 .project-card::before {
   content: '';
@@ -591,7 +591,10 @@ body {
 .project-card:hover::before { opacity: 1; }
 .project-card:hover {
   border-color: var(--accent);
-  box-shadow: 0 20px 60px -12px rgba(193,123,74,0.12);
+  /* Flat lift, tight neutral shadow. The old 60px accent-coloured glow
+     bled over the copy at the card edges and made it hard to read. */
+  transform: translateY(-3px);
+  box-shadow: 0 4px 16px -6px rgba(26,24,22,0.12);
 }
 
 /* number accent */

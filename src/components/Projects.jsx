@@ -1,5 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react'
-import { useReducedMotion } from '../hooks/useReducedMotion'
+import React, { useState } from 'react'
 
 const projects = [
   {
@@ -190,36 +189,18 @@ function BrowserMockup({ bg, accent, title, screenshot }) {
   )
 }
 
+/*
+  No pointer-tracked 3D tilt on these cards. It rotated the whole article
+  on perspective(1000px), which promoted it to its own GPU layer and
+  re-rasterised everything inside -- title, description and tags all went
+  blurry under the pointer. The hover lift now lives in .project-card:hover
+  as a flat translateY, so the text stays sharp. Same reason Services.jsx
+  has no TiltCard any more.
+*/
 function ProjectCard({ project, index }) {
-  const cardRef = useRef(null)
-  const reduced = useReducedMotion()
-
-  useEffect(() => {
-    const card = cardRef.current
-    if (!card) return
-    if (reduced) return
-    if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return
-
-    const onMove = (e) => {
-      const rect = card.getBoundingClientRect()
-      const x = (e.clientX - rect.left) / rect.width - 0.5
-      const y = (e.clientY - rect.top) / rect.height - 0.5
-      card.style.transform = `perspective(1000px) rotateX(${y * -6}deg) rotateY(${x * 6}deg)`
-    }
-    const onLeave = () => { card.style.transform = 'none' }
-    card.addEventListener('mousemove', onMove)
-    card.addEventListener('mouseleave', onLeave)
-    return () => {
-      card.removeEventListener('mousemove', onMove)
-      card.removeEventListener('mouseleave', onLeave)
-    }
-  }, [reduced])
-
   return (
     <article
       className={`reveal-up delay-${(index % 4) + 1} project-card`}
-      ref={cardRef}
-      style={{ transition: 'transform 0.15s ease, border-color 0.4s ease, box-shadow 0.4s ease' }}
       data-cursor="view"
       aria-label={`Project: ${project.title} — ${project.category}`}
     >
