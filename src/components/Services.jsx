@@ -37,7 +37,7 @@ const SERVICES = [
   {
     title: 'The Backend No-Code Can’t Reach',
     description:
-      'Where the automation stops and real software starts: custom function endpoints, CRM sync, multi-tenant dashboards, RAG over your own documentation. SkyfurnitureCA (dual-currency e-commerce, built solo for a real client) and ragbase (multi-tenant SaaS with Stripe billing) were both shipped this way.',
+      'Where the automation stops and real software starts: custom function endpoints, CRM sync, multi-tenant dashboards, RAG over your own documentation. SkyfurnitureCA (dual-currency e-commerce, built solo for a real client) and ragbase (multi-tenant SaaS with plan-enforced usage limits) were both shipped this way.',
     outcome: 'The part that makes the agent fast instead of almost working.',
     tags: ['Next.js', 'React', 'Node.js', 'PostgreSQL'],
   },
