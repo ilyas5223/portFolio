@@ -1,7 +1,7 @@
 import Marquee from './Marquee'
 
 const marqueeItems = [
-  'VAPI', 'Retell AI', 'n8n', 'Make.com', 'Twilio', 'Call transcripts', 'Sub-second latency',
+  'VAPI', 'Retell AI', 'n8n', 'Make.com', 'Twilio', 'Call transcripts', 'Latency tracking',
   'Calendar booking logic', 'CRM sync', 'Idempotency guards', 'Error alerting', 'Cold email infrastructure',
   'SPF / DKIM / DMARC', 'Lead scraping & verification', 'Next.js', 'React', 'TypeScript', 'Node.js',
   'Supabase', 'PostgreSQL', 'Vercel',
@@ -73,7 +73,7 @@ export default function About() {
                 Most people building voice agents and automations are marketers
                 wiring two no-code tools together — and it works until your
                 calendar changes. I am an engineer, so the booking logic, the
-                CRM sync and the dashboard are all custom. That is also why you
+                function endpoints and the dashboard are all custom. That is also why you
                 get to see inside instead of taking my word for it.
               </p>
             </div>

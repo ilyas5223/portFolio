@@ -13,7 +13,7 @@ const faqs = [
   },
   {
     q: 'What makes you different from the no-code crowd?',
-    a: "Most people selling voice agents and automations are marketers who can wire two no-code tools together. That works until your calendar changes. I am an engineer -- the booking logic, the custom function endpoints, the CRM sync and the dashboard are all code I wrote. That is why the response time lands under half a second instead of the three-second pause that makes callers hang up, and why the jobs they keep failing at are the ones I find straightforward.",
+    a: "Most people selling voice agents and automations are marketers who can wire two no-code tools together. That works until your calendar changes. I am an engineer -- the booking logic, the custom function endpoints and the dashboard are all code I wrote. The dashboard measures response time on every call, so a slow turn gets found and fixed instead of guessed at, and that is why the jobs they keep failing at are the ones I find straightforward.",
     tag: 'General',
   },
   {
